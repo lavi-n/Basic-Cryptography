@@ -1,0 +1,11 @@
+x=ord('a')
+y=ord('z')
+z=y
+d={}
+for i in range(x,y+1):
+    d[chr(i)]=chr(z)
+    z=z-1
+s=input("Enter a string: ")
+for i in range(len(s)):
+    a=s[i]
+    print(d[a], end ="")

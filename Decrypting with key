@@ -1,0 +1,11 @@
+import random
+s2 = input("Enter the code to be decrypted: ")
+z = ''
+x = int(input("Enter the shift"))
+for i in s2:
+   if i in ', .':
+      z = z + i
+   else:
+      F2 = (ord(i) - ord('A') + 26 - x)
+      z = z +  chr(ord('A') + F2 % 26)
+print("The decrypted text is" , z)

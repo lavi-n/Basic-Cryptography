@@ -1,0 +1,15 @@
+#%%
+import random
+s2 = input("Enter the code to be decrypted: ")
+z = ''
+
+for x in range(1,27):
+    for i in s2:
+        if i in ', .':
+            z = z + i
+        else:
+            F2 = (ord(i) - ord('A') + 26 - x)
+            z = z +  chr(ord('A') + F2 % 26)
+    print(z)
+    z=''
+print(" ")

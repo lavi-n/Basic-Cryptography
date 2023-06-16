@@ -1,0 +1,13 @@
+import random
+print("-----SINGLE SHIFT CIPHER-----")
+s1 = input("Enter the text to be encrypted: ")
+s = s1.upper()
+y = random.choice(range(1,27))
+final = ''
+for i in s:
+    if i in ', .':
+        final = final + i
+    else:
+        F1 = (ord(i) - ord('A') + y)
+        final = final + chr(ord('A') + F1%26)
+print("The encrypted text is ", final, " with shift of ", y)
